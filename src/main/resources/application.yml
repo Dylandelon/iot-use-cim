@@ -1,0 +1,15 @@
+spring:
+  rabbitmq:
+    host: 10.39.10.89
+    port: 5672
+    username: UES-caixian
+    password: 1234567u
+    virtual-host: UES-caixian
+  cloud:
+    stream:
+      default-binder: rabbit
+      bindings:
+        input:
+          destination: data_exchange
+          contentType: application/json
+          group: dynamic_data_queue
