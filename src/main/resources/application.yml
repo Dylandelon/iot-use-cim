@@ -13,3 +13,6 @@ spring:
           destination: data_exchange
           contentType: application/json
           group: dynamic_data_queue
+enn:
+  file:
+    path: /Users/zhangdelong/myfile/xcm(1).csv
