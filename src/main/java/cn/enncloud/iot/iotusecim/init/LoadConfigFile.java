@@ -20,15 +20,18 @@ public class LoadConfigFile implements CommandLineRunner {
     @Autowired
     private ILoadCimConfigService loadCimConfigService;
 
-    private Resource resource;
-
-    private static Map<String,String> IOT_META_MAP=null;
 
     @Override
     public void run(String... args) throws Exception {
 
+        if(logger.isInfoEnabled()){
+            logger.info("----------加载cim配置文件开始---------");
+        }
         loadCimConfigService.init();
         loadCimConfigService.load();
+        if(logger.isInfoEnabled()){
+            logger.info("----------加载cim配置文件结束---------");
+        }
 
     }
 }

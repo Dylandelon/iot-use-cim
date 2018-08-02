@@ -51,7 +51,7 @@ public class LoadCimConfigService implements ILoadCimConfigService {
 
         stream.forEach(StaticManager.IOT_META_MAP::putAll);
         StaticManager.IOT_META_MAP.entrySet().stream().filter(o->o.getKey()!=null).forEach(o->{
-            System.out.println("key:"+o.getKey()+"value:"+o.getValue());});
+            logger.info("key:"+o.getKey()+"value:"+o.getValue());});
 
     }
 
