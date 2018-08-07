@@ -10,7 +10,7 @@ import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
-@Component
+//@Component
 public class LoadConfigFile implements CommandLineRunner {
     private static final Logger logger = LogManager.getLogger(LoadConfigFile.class);
 

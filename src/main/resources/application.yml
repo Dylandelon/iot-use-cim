@@ -3,16 +3,22 @@ spring:
     host: 10.39.10.89
     port: 5672
     username: UES-caixian
-    password: 1234567u
+    password: 1QMsPY207NT!
     virtual-host: UES-caixian
   cloud:
     stream:
       default-binder: rabbit
       bindings:
         input:
-          destination: data_exchange
+          destination: iot_edge_data
           contentType: application/json
-          group: dynamic_data_queue
+          group: realtime_uncim
+      rabbit:
+        bindings:
+          input:
+            consumer:
+              bindingRoutingKey: realtime.uncim
+              queueNameGroupOnly: true
 enn:
   file:
     path: /Users/zhangdelong/myfile/xcm(1).csv
